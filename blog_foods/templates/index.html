@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,15 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="icon" href="../img/favicon.ico">
+<link rel="icon" href="{% static 'img/favicon.ico' %}">
 <title>Review ẩm thực PTIT</title>
 <!-- Bootstrap core CSS -->
-<link href="../css/mediumish.css" rel="stylesheet">
+<link href="{% static 'css/mediumish.css' %}" rel="stylesheet">
 <!-- Fonts -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 <!-- Custom styles for this template -->
-<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 </head>
 <body>
 
@@ -26,7 +27,7 @@
 <div class="container">
 	<!-- Begin Logo -->
 	<a class="navbar-brand" href="index.html">
-	<img src="../img/logo.png" alt="logo">
+	<img src="{% static 'img/logo.png' %}" alt="logo">
 	</a>
 	<!-- End Logo -->
 	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
@@ -75,7 +76,7 @@
 			<div class="row">
 				<div class="col-md-5 wrapthumbnail">
 					<a href="post.html">
-						<div class="thumbnail" style="background-image:url(../img/demopic/1.jpg);">
+						<div class="thumbnail" style="background-image:url('static/img/demopic/1.jpg');">
 						</div>
 					</a>
 				</div>
@@ -127,9 +128,9 @@
 <!-- Bootstrap core JavaScript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="../js/jquery.min.js"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/ie10-viewport-bug-workaround.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
 </body>
 </html>
