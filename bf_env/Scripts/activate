@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\congd\Documents\Study\python\BTL\python11_btl\bf_env"
+VIRTUAL_ENV="C:\Users\congd\Documents\Study\python\BTL\python11_btl\bf_env" # change your path to fodel bf_env
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
