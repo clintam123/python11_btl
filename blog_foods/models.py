@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.contrib.auth import get_user_model
 import uuid
 from django.db.models import enums
@@ -28,6 +28,21 @@ class Post(models.Model):
     caption = models.TextField(blank=True)
     created_at = models.DateTimeField(default=datetime.now)
     no_of_like = models.IntegerField(default=0)
+    rate = models.IntegerField(
+        default=1,
+        validators=[
+            MaxValueValidator(10),
+            MinValueValidator(0)
+        ]
+    )
+    description = models.TextField(blank=True)
+    price = models.IntegerField(
+    default=1,
+    validators=[
+        MinValueValidator(1)
+    ]
+    )
+
 
     def __str__(self):
         return self.user
