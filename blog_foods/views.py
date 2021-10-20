@@ -15,3 +15,8 @@ def upload(request):
 class DetailView(generic.DetailView):
     model = Post
     template_name = 'post.html'
+    
+def author(request):
+    author = request.user
+    posts = Post.objects.filter(posted_by_id=author.id)
+    return render(request, 'author.html', {'author': author, 'posts': posts})
