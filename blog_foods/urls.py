@@ -7,4 +7,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('upload/', views.upload, name='upload'),  # 'Upload'
     path('<int:pk>', views.DetailView.as_view(), name='detail'),
+    path('author', views.author, name='author'),
 ]
