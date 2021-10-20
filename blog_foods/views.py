@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Post
+from django.views import generic
 # Create your views here.
 
 def index(request):
@@ -10,3 +11,7 @@ def index(request):
 
 def upload(request):
     return render(request, 'upload.html')
+
+class DetailView(generic.DetailView):
+    model = Post
+    template_name = 'post.html'
