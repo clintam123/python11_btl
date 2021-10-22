@@ -4,6 +4,7 @@ from django.contrib.auth import get_user_model
 import uuid
 from django.db.models import enums
 from datetime import datetime
+from django.conf import settings
 # Create your models here.
 
 # khởi tạo mô hình User tiêu chuẩn https://docs.djangoproject.com/en/3.2/ref/contrib/auth/#django.contrib.auth.models.User
@@ -49,7 +50,8 @@ class Post(models.Model):
             MinValueValidator(1)
         ]
     )
-
+    posted_by = models.ForeignKey(settings.AUTH_USER_MODEL, null=True,
+        verbose_name="posted by", on_delete=models.SET_NULL)
     def __str__(self):
         return self.user
 
