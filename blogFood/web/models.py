@@ -15,7 +15,7 @@ class User(models.Model):
 
 class Post(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    img = models.ImageField(upload_to = MEDIA_ROOT); 
+    img = models.ImageField(upload_to = 'post_images'); 
     user = models.CharField(max_length = 100)
     caption = models.TextField(blank=True)
     created_at = models.DateTimeField(default= datetime.datetime.now, blank=True, editable= False)

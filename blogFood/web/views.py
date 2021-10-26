@@ -17,6 +17,9 @@ def home(request):
 def create(request):
     return render(request, 'web/create.html'); 
 
+def author(request):
+    return render(request, 'web/author.html'); 
+
 def upload(request):
     if request.method == 'POST':
         img = request.FILES.get('img')
@@ -26,7 +29,6 @@ def upload(request):
         price = request.POST.get('price')
         new_post = Post.objects.create(price = price, img = img, caption = caption , description = description, rate = scores, user = 'test')
         new_post.save()
-    
     return redirect('/')
 
    
